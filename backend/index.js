@@ -21,6 +21,9 @@ app.use(cors());
 const PORT = process.env.PORT || 8000;
 
 // Routes
+app.use("/", (res, req) => {
+  res.send("Hello World");
+})
 app.use('/api/articles', articleRoutes);
 //app.use('/api/moderation', moderationRoutes);
 //app.use('/api/analysis', analysisRoutes);
